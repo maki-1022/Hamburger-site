@@ -1,7 +1,9 @@
 /*-- projectフォルダの中の_index.scss --*/
 @use "p-card";
 @use "p-hamburger";
-@use "p-mv";
+@use "p-home-visual";
 @use "p-pager";
 @use "p-section";
+@use "p-search";
+@use "p-panel";
 //新しくパーシャルを作れば、ここに追記していく
