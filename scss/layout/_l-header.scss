@@ -1,7 +1,19 @@
-@use "../foundation/index";
+@use "../foundation/forward" as *;
 
 .l-header {
-    grid-row: 1;
-    grid-column: 1/2;
-    background-color: #FFF7EF;
+    background-color: $header-color;
+    height: 215px;
+    position: relative; /* 右上menuをabsolute指定するため*/
+    @include pc {
+        grid-row: 1;
+        grid-column: 1/2;
+    }       
+    &__logo {
+        text-align: center;
+        margin-top: 43px;
+         img {
+            width: 203px;
+            height: 47px;
+         }
+    }
 }

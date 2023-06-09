@@ -1,5 +1,8 @@
+@use "../foundation/forward" as *;
+
 .l-main {
-    grid-row: 2;
-    grid-column: 1/2;
-    background-color: #F5F5F5;
+    @include pc {
+        grid-row: 2;
+        grid-column: 1; 
+    }       
 }

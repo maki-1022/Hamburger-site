@@ -1,12 +1,23 @@
+@use "../foundation/forward" as *;
+
 .p-panel {
+    position: relative; /* text部分をabusoluteにするため */
     &__bg--left {
         background-image: url(../../img/TakeOut.jpg);
-        width: 100%;
-        height: 500px;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: auto;
+        height: 642px;
+        margin: 20px;
     }
     &__bg--right {
+        @extend .p-panel__bg--left;
         background-image: url(../../img/EatIn.jpg);
-        width: 100%;
-        height: 500px;
+    }
+    &__heading {
+        position: absolute;
+        top: 13px;
+        left: 35px;
     }
 }

@@ -1,0 +1,19 @@
+@use "../foundation/forward" as *;
+
+.c-heading {
+    font-family: $en-heading-font;
+    font-weight: $bold;
+    @include font-size(41);
+    color: $white;
+    position: relative; /* 疑似要素(_)をabsoluteにするため */
+    &::after {
+        content: "";
+        display: inline-block;
+        background-color: $white;
+        width: 33.89px;
+        height: 4px;
+        position: absolute;
+        top: 4.5rem;
+        left: 0;
+    }
+}
