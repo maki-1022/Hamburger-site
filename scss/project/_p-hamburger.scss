@@ -3,9 +3,16 @@
 .p-hamburger {
     font-family: $en-heading-font;
     @include font-size(20);
+    @include tablet {
+        @include font-size(34);
+    }
     font-weight: 700;
     color: $gray;
     position: absolute;
     top: 8px;
     right: 8px;
+    @include tablet {
+        top: 20px;
+        right: 25px;
+    }
 }

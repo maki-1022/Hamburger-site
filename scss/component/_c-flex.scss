@@ -1,0 +1,7 @@
+@use "../foundation/forward" as *;
+
+.c-flex {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}

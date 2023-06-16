@@ -3,6 +3,9 @@
 .l-header {
     background-color: $header-color;
     height: 215px;
+    @include tablet {
+        height: 217px;
+    }
     position: relative; /* 右上menuをabsolute指定するため*/
     @include pc {
         grid-row: 1;
