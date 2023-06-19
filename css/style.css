@@ -11,6 +11,9 @@ body {
   line-height: 1.485;
   font-family: "M PLUS 1", sans-serif;
 }
+body.is-open {
+  position: fixed;
+}
 
 img {
   max-width: 100%;
@@ -78,7 +81,6 @@ a {
 }
 
 .l-sidebar {
-  display: none;
   background-color: #F2EDE9;
 }
 @media screen and (min-width: 1280px) {
@@ -161,6 +163,16 @@ a {
   gap: 16px;
 }
 
+.c-cover.is-open {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.502);
+  z-index: 50;
+}
+
 /*-- componentフォルダの中の_index.scss --*/
 .p-hamburger {
   font-family: "Roboto", sans-serif;
@@ -171,18 +183,26 @@ a {
   position: absolute;
   top: 8px;
   right: 8px;
+  z-index: 200;
+  transition: 0.3s;
 }
-@media screen and (min-width: 768px) {
-  .p-hamburger {
-    font-size: 34px;
-    font-size: 2.125rem;
-  }
+.p-hamburger.is-open > span {
+  visibility: hidden;
 }
-@media screen and (min-width: 768px) {
-  .p-hamburger {
-    top: 20px;
-    right: 25px;
-  }
+.p-hamburger.is-open::before, .p-hamburger.is-open::after {
+  display: block;
+  content: "";
+  width: 45.25px;
+  height: 6px;
+  background-color: #707070;
+  position: absolute;
+  top: 12px;
+}
+.p-hamburger.is-open::before {
+  transform: rotate(-45deg);
+}
+.p-hamburger.is-open::after {
+  transform: rotate(45deg);
 }
 
 .p-home-visual {
@@ -274,14 +294,14 @@ a {
   position: relative; /* 虫眼鏡をabusoluteにするため */
   height: auto;
 }
-.p-search::before { /* 虫眼鏡アイコンrelativeを変更する（後で） */
+.p-search::before {
   content: "";
   width: 24px;
   height: 24px;
   background-image: url(../../img/mushimegane.svg);
   position: absolute;
   top: 12px;
-  left: 36px;
+  left: 33px;
 }
 @media screen and (min-width: 768px) {
   .p-search::before {
@@ -346,6 +366,20 @@ a {
   font-size: 1.375rem;
   font-weight: 700;
   margin-bottom: 8px;
+}
+
+.p-sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 0;
+  overflow-y: scroll; /* メニュー内容が多い場合に縦スクロールする */
+  z-index: 100;
+  transition: 0.3s;
+}
+.p-sidebar.is-open {
+  width: 87%;
 }
 
 /*-- projectフォルダの中の_index.scss --*/ /*-- utilityフォルダの中の_index.scss --*/

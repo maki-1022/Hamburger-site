@@ -6,14 +6,14 @@
     position: relative; /* 虫眼鏡をabusoluteにするため */
     // width: 100%;
     height: auto;
-    &::before { /* 虫眼鏡アイコンrelativeを変更する（後で） */
+    &::before {
         content: "";
         width: 24px;
         height: 24px;
         background-image: url(../../img/mushimegane.svg);
         position: absolute;
         top: 12px;
-        left: 36px;
+        left: 33px;
         @include tablet {
             top: 11px;
             left: 144px;

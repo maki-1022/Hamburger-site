@@ -1,7 +1,7 @@
 @use "../foundation/forward" as *;
 
 .l-sidebar {
-    display: none;
+    // display: none;
     background-color: #F2EDE9;
     @include pc {
         display: block;

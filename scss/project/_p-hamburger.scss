@@ -3,16 +3,34 @@
 .p-hamburger {
     font-family: $en-heading-font;
     @include font-size(20);
-    @include tablet {
-        @include font-size(34);
-    }
     font-weight: 700;
     color: $gray;
     position: absolute;
     top: 8px;
     right: 8px;
-    @include tablet {
-        top: 20px;
-        right: 25px;
+    z-index: 200;
+    transition: 0.3s;
+
+    // メニュー展開時の×印
+    &.is-open {
+        > span {
+            visibility: hidden;
+        }
+        &::before,
+        &::after {
+            display: block;
+            content: "";
+            width: 45.25px;
+            height: 6px;
+            background-color: $gray;
+            position: absolute;
+            top: 12px;
+        }
+        &::before {
+            transform: rotate(-45deg);
+        }
+        &::after {
+            transform: rotate(45deg);
+        }
     }
 }
