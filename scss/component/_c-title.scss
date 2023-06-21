@@ -1,7 +1,0 @@
-@use "../foundation/forward" as *;
-
-.c-title {
-    @include font-size(36);
-    font-weight: 700;
-    color: $white;
-}

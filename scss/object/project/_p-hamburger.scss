@@ -1,9 +1,8 @@
-@use "../foundation/forward" as *;
+@use "../../foundation/forward" as *;
 
 .p-hamburger {
     font-family: $en-heading-font;
     @include font-size(20);
-    font-weight: 700;
     color: $gray;
     position: absolute;
     top: 8px;

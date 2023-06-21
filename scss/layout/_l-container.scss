@@ -4,7 +4,7 @@
     display: grid;
     min-height: 100vh;
     grid-template-rows: auto 1fr auto;
-    background-color: beige;
+    // background-color: beige;
     @include pc {
         grid-template-columns: 1fr 19%;
         grid-template-rows: 217px 1fr 150px;

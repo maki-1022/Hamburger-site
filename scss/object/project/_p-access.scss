@@ -1,4 +1,4 @@
-@use "../foundation/forward" as *;
+@use "../../foundation/forward" as *;
 
 .p-access {
     background-color: $black;
@@ -19,7 +19,7 @@
          opacity: 59.71%;
         //  min-height: 691px;
          }
-         &::before {
+         &::before { /* グレー部分(layer) */
             content: "";
             display: block;
             width: 100%;
@@ -35,7 +35,6 @@
         position: relative;
         z-index: 5;
         color: $white;
-        font-weight: $bold;
         width: 79%; 
         margin: -184% auto 0 auto;
         & .c-heading {

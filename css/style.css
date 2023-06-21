@@ -39,7 +39,6 @@ a {
   display: grid;
   min-height: 100vh;
   grid-template-rows: auto 1fr auto;
-  background-color: beige;
 }
 @media screen and (min-width: 1280px) {
   .l-container {
@@ -178,7 +177,6 @@ a {
   font-family: "Roboto", sans-serif;
   font-size: 20px;
   font-size: 1.25rem;
-  font-weight: 700;
   color: #707070;
   position: absolute;
   top: 8px;
@@ -252,7 +250,7 @@ a {
   height: 100%;
   opacity: 59.71%;
 }
-.p-access__map::before {
+.p-access__map::before { /* グレー部分(layer) */
   content: "";
   display: block;
   width: 100%;
@@ -267,7 +265,6 @@ a {
   position: relative;
   z-index: 5;
   color: #ffffff;
-  font-weight: 700;
   width: 79%;
   margin: -184% auto 0 auto;
 }
@@ -377,10 +374,32 @@ a {
   overflow-y: scroll; /* メニュー内容が多い場合に縦スクロールする */
   z-index: 100;
   transition: 0.3s;
+  color: #707070;
 }
 .p-sidebar.is-open {
   width: 87%;
 }
+.p-sidebar__heading {
+  display: none;
+}
+.p-sidebar__block {
+  margin: 178px 0 0 46px;
+}
+.p-sidebar__menu {
+  margin: 60px 0 40px 0;
+  font-size: 24px;
+  font-size: 1.5rem;
+}
+.p-sidebar__item {
+  margin: 20px;
+  font-size: 20px;
+  font-size: 1.25rem;
+}
 
-/*-- projectフォルダの中の_index.scss --*/ /*-- utilityフォルダの中の_index.scss --*/
+/*-- projectフォルダの中の_index.scss --*/
+.u-bold {
+  font-weight: 700;
+}
+
+/*-- utilityフォルダの中の_index.scss --*/
 /*# sourceMappingURL=style.css.map */

@@ -1,8 +1,7 @@
 @use "../foundation/forward" as *;
 
 .l-sidebar {
-    // display: none;
-    background-color: #F2EDE9;
+    background-color: $sidebar-color;
     @include pc {
         display: block;
         grid-row: 1/3;
