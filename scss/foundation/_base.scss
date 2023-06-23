@@ -23,6 +23,11 @@ h2 {
   @include font-size(36);   
 }
 
+h3 {
+  font-weight: $bold;
+  @include font-size(24);
+}
+
 ul {
   list-style-type: none;
 }
