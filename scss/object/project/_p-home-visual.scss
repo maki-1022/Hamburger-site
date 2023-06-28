@@ -12,7 +12,10 @@
         @include tablet {
             background-image: url(../../img/main-visual-tablet.jpg);
             height: 285px;
-        }    
+        }
+        @include pc {
+            height: 530px;
+        }  
     }
     &__text {
         position: absolute;
@@ -20,6 +23,10 @@
         left: 25px;
         @include tablet {
             left: 61px;
+        }
+        @include pc {
+            top: 234px;
+            left: 86px;
         }
     }
 }

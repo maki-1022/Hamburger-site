@@ -14,9 +14,19 @@
     &__list {
         @include font-size(18);
         margin-top: 16px;
+        @include tablet {
+            margin-top: 30px;
+        }
+        @include pc {
+            @include font-size(20);
+            margin-top: 41px;
+        }
     }
     &__copyright {
         @include font-size(14);
         margin-top: 70px;
+        @include tablet {
+            margin-top: 44px;
+        }
     }
 }

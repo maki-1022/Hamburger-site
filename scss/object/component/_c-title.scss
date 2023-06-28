@@ -4,4 +4,7 @@
     @include font-size(36);
     font-weight: $bold;
     color: $white;
+    @include pc {
+        @include font-size(40);
+    }
 }

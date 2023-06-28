@@ -10,13 +10,23 @@
     @include pc {
         grid-row: 1;
         grid-column: 1/2;
-    }       
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
     &__logo {
         text-align: center;
         margin-top: 43px;
+        @include pc {
+            margin-left: 65px;
+        }
          img {
             width: 203px;
             height: 47px;
+            @include pc {
+                width: 325px;
+                height: 84px;
+            }
          }
     }
 }

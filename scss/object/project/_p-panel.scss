@@ -15,6 +15,13 @@
         padding-top: 54%;
         min-height: 642px;
         margin: 20px 5%;
+        @include tablet {
+            margin: 0;
+            height: 100%;
+        }
+        @include pc {
+            padding-top: 134%;
+        }
     }
     &__bg--right {
         @extend .p-panel__bg--left;
@@ -24,6 +31,17 @@
         position: absolute;
         top: 13px;
         left: 35px;
+        @include tablet {
+            left: 11px;
+        }
+        & .c-heading {
+            @include pc {
+                @include font-size(80);
+                &::after {
+                    width: 63px;
+                }
+            }
+        }
     }
     &__text {
         background-color: rgba(255, 255, 255, 0.8);
