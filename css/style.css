@@ -162,16 +162,37 @@ a {
   color: #707070;
 }
 
-.c-title {
+.c-title, .c-title--archive {
   font-size: 36px;
   font-size: 2.25rem;
   font-weight: 700;
   color: #ffffff;
 }
 @media screen and (min-width: 960px) {
-  .c-title {
+  .c-title, .c-title--archive {
     font-size: 40px;
     font-size: 2.5rem;
+  }
+}
+
+.c-title--archive {
+  font-family: "Roboto", sans-serif;
+}
+.c-title--archive::after {
+  content: "チーズバーガー";
+  color: #ffffff;
+  font-family: "M PLUS 1", sans-serif;
+  font-size: 16px;
+  font-size: 1rem;
+  width: 100%;
+  white-space: nowrap;
+  display: block;
+}
+@media screen and (min-width: 768px) {
+  .c-title--archive::after {
+    display: inline;
+    vertical-align: middle;
+    padding-left: 19px;
   }
 }
 
@@ -201,6 +222,18 @@ a {
   left: 0;
 }
 
+.c-heading--h2 {
+  font-weight: 700;
+  font-size: 28px;
+  font-size: 1.75rem;
+}
+@media screen and (min-width: 768px) {
+  .c-heading--h2 {
+    font-size: 36px;
+    font-size: 2.25rem;
+  }
+}
+
 .c-flex {
   display: flex;
   flex-direction: column;
@@ -219,7 +252,95 @@ a {
   z-index: 50;
 }
 
+.c-link {
+  color: #707070;
+  background-color: #ffffff;
+  border: 1px solid #707070;
+  border-radius: 20px;
+}
+
 /*-- componentフォルダの中の_index.scss --*/
+.p-card {
+  margin-bottom: 21px;
+}
+@media screen and (min-width: 768px) {
+  .p-card {
+    display: flex;
+  }
+}
+@media screen and (min-width: 960px) {
+  .p-card {
+    margin-bottom: 30px;
+  }
+}
+.p-card__img {
+  min-height: 230.53px;
+  width: 100%;
+  vertical-align: middle;
+  aspect-ratio: 3/2;
+}
+@media screen and (min-width: 768px) {
+  .p-card__img {
+    width: 50%;
+  }
+}
+.p-card__menu {
+  background-color: #3C2B1C;
+  color: #ffffff;
+  padding: 32px 5% 43px 5%;
+}
+@media screen and (min-width: 768px) {
+  .p-card__menu {
+    width: 50%;
+  }
+}
+.p-card__menu .c-heading--h2 {
+  font-size: 20px;
+  font-size: 1.25rem;
+}
+@media screen and (min-width: 960px) {
+  .p-card__menu .c-heading--h2 {
+    font-size: 36px;
+    font-size: 2.25rem;
+  }
+}
+.p-card__menu > h3 {
+  font-size: 16px;
+  font-size: 1rem;
+  margin: 21px 0 7px 0;
+}
+@media screen and (min-width: 960px) {
+  .p-card__menu > h3 {
+    font-size: 24px;
+    font-size: 1.5rem;
+    margin: 44px 0 13px 0;
+  }
+}
+.p-card__menu > p {
+  font-weight: 400;
+  margin-bottom: 40px;
+}
+@media screen and (min-width: 960px) {
+  .p-card__menu > p {
+    margin-bottom: 60px;
+  }
+}
+.p-card__menu .c-link {
+  width: 163px;
+  height: 42px;
+  text-align: center;
+  padding: 8px 0;
+  margin: 0 auto;
+}
+@media screen and (min-width: 960px) {
+  .p-card__menu .c-link {
+    width: 292px;
+    height: 76px;
+    padding: 24px 0;
+    border-radius: 36px;
+  }
+}
+
 .p-hamburger {
   font-family: "Roboto", sans-serif;
   font-size: 20px;
@@ -304,6 +425,87 @@ a {
   .p-home-visual__text {
     top: 234px;
     left: 86px;
+  }
+}
+
+.p-pager {
+  color: #707070;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 63px 0 29px 0;
+  font-family: "Roboto", sans-serif;
+}
+@media screen and (min-width: 768px) {
+  .p-pager {
+    justify-content: center;
+    margin: 106px 0 32px 0;
+  }
+}
+@media screen and (min-width: 960px) {
+  .p-pager {
+    margin: 150px 0 64px 0;
+  }
+}
+.p-pager > span {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .p-pager > span {
+    display: inline-block;
+    margin-right: 19px;
+  }
+}
+.p-pager__arrow {
+  width: 17px;
+}
+.p-pager__prev, .p-pager__next {
+  position: relative;
+  left: -30px;
+  top: -2px;
+}
+@media screen and (min-width: 768px) {
+  .p-pager__prev, .p-pager__next {
+    display: none;
+  }
+}
+.p-pager__next {
+  left: 30px;
+}
+@media screen and (min-width: 768px) {
+  .p-pager__next {
+    display: none;
+  }
+}
+.p-pager__item {
+  display: flex;
+  visibility: hidden;
+}
+@media screen and (min-width: 768px) {
+  .p-pager__item {
+    visibility: visible;
+  }
+}
+@media screen and (min-width: 768px) {
+  .p-pager__link {
+    border: 1px solid #707070;
+    background-color: #ffffff;
+    margin: 0 7.5px;
+    text-align: center;
+    line-height: 33px;
+  }
+  .p-pager__link:first-child {
+    margin-left: 15px;
+    color: #ffffff;
+    background-color: #3C2B1C;
+  }
+  .p-pager__link:last-child {
+    margin-right: 15px;
+  }
+  .p-pager__link > a {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
   }
 }
 
@@ -519,7 +721,6 @@ a {
   width: 90%;
   height: auto;
   margin: 0 auto;
-  color: #3C2A10;
   padding: 16px;
 }
 .p-panel__text-heading {
@@ -608,9 +809,80 @@ a {
   }
 }
 
+.p-archive-visual {
+  background-image: url(../../img/archive-visual-sp.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 285px;
+  position: relative; /* before、タイトルをabsolute */
+}
+@media screen and (min-width: 768px) {
+  .p-archive-visual {
+    background-image: url(../../img/archive-visual-tablet.jpg);
+  }
+  .p-archive-visual .c-title--archive {
+    font-size: 60px;
+    font-size: 3.75rem;
+  }
+}
+@media screen and (min-width: 960px) {
+  .p-archive-visual {
+    background-image: url(../../img/archive-visual-pc.jpg);
+  }
+}
+.p-archive-visual::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.p-archive-visual__text {
+  position: absolute;
+  top: 106px;
+  left: 37px;
+}
+@media screen and (min-width: 768px) {
+  .p-archive-visual__text {
+    top: 106px;
+    left: 86px;
+  }
+}
+@media screen and (min-width: 960px) {
+  .p-archive-visual__text {
+    top: 83px;
+  }
+}
+
+.p-menu__inner {
+  margin: 32px 5%;
+}
+.p-menu__inner > p {
+  line-height: 1.5;
+  margin: 25px 0 19px 0;
+}
+@media screen and (min-width: 768px) {
+  .p-menu__inner > p {
+    margin: 20px 0 37px 0;
+  }
+}
+@media screen and (min-width: 960px) {
+  .p-menu__inner > p {
+    margin: 20px 0 70px 0;
+  }
+}
+
 /*-- projectフォルダの中の_index.scss --*/
 .u-bold {
   font-weight: 700;
+}
+
+.u-brown {
+  color: #3C2A10;
 }
 
 /*-- utilityフォルダの中の_index.scss --*/
