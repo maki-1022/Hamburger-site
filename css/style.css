@@ -274,10 +274,10 @@ a {
   }
 }
 .p-card__img {
-  min-height: 230.53px;
   width: 100%;
   vertical-align: middle;
-  aspect-ratio: 3/2;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 @media screen and (min-width: 768px) {
   .p-card__img {
@@ -496,8 +496,6 @@ a {
   }
   .p-pager__link:first-child {
     margin-left: 15px;
-    color: #ffffff;
-    background-color: #3C2B1C;
   }
   .p-pager__link:last-child {
     margin-right: 15px;
@@ -506,6 +504,11 @@ a {
     display: inline-block;
     width: 35px;
     height: 35px;
+  }
+  .p-pager__link:hover,
+.p-pager__link :active {
+    color: #ffffff;
+    background-color: #3C2B1C;
   }
 }
 

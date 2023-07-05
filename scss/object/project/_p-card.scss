@@ -9,10 +9,9 @@
         margin-bottom: 30px;
     }
     &__img {
-        min-height: 230.53px;
         width: 100%;
         vertical-align: middle;
-        aspect-ratio: 3 / 2;
+        object-fit: cover;
         @include tablet {
             width: 50%;
         }
