@@ -7,3 +7,9 @@
     font-weight: $bold;
     color: $gray;
 }
+
+.c-button--single {
+    @extend .c-button;
+    border-radius: 20px;
+    color: $brown;
+}

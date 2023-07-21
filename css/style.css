@@ -10,6 +10,7 @@ body {
   font-weight: 400;
   line-height: 1.485;
   font-family: "M PLUS 1", sans-serif;
+  min-width: 320px;
 }
 body.is-open {
   position: fixed;
@@ -154,12 +155,17 @@ a {
 }
 
 /*-- layoutフォルダの中の_index.scss --*/
-.c-button {
+.c-button, .c-button--single {
   border: 1px solid #707070;
   background: linear-gradient(#F2EDE9, #DED8D3);
   border-radius: 10px;
   font-weight: 700;
   color: #707070;
+}
+
+.c-button--single {
+  border-radius: 20px;
+  color: #3C2A10;
 }
 
 .c-title, .c-title--archive {
@@ -234,12 +240,66 @@ a {
   }
 }
 
+.c-heading--h3 {
+  font-size: 24px;
+  font-size: 1.5rem;
+}
+@media screen and (min-width: 768px) {
+  .c-heading--h3 {
+    font-size: 28px;
+    font-size: 1.75rem;
+  }
+}
+
+.c-heading--h4 {
+  font-size: 20px;
+  font-size: 1.25rem;
+}
+
+.c-heading--h5 {
+  font-size: 20px;
+  font-size: 1.25rem;
+}
+
+.c-heading--h6 {
+  font-size: 20px;
+  font-size: 1.25rem;
+}
+
 .c-flex {
   display: flex;
   flex-direction: column;
   gap: 16px;
   height: 100%;
   justify-content: flex-end;
+}
+
+.c-flex--row {
+  display: flex;
+  gap: 9px;
+}
+@media screen and (min-width: 768px) {
+  .c-flex--row {
+    gap: 21px;
+  }
+}
+@media screen and (min-width: 960px) {
+  .c-flex--row {
+    gap: 40px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .c-flex--wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 13px;
+  }
+}
+@media screen and (min-width: 960px) {
+  .c-flex--wrap {
+    gap: 20px;
+  }
 }
 
 .c-cover.is-open {
@@ -257,6 +317,22 @@ a {
   background-color: #ffffff;
   border: 1px solid #707070;
   border-radius: 20px;
+}
+
+.c-inner {
+  margin: 0 5%;
+}
+
+.c-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+.c-table tr {
+  height: 77px;
+}
+.c-table td {
+  border: 1px solid #707070;
+  padding-left: 30px;
 }
 
 /*-- componentフォルダの中の_index.scss --*/
@@ -820,6 +896,7 @@ a {
   width: 100%;
   height: 285px;
   position: relative; /* before、タイトルをabsolute */
+  margin-bottom: 32px;
 }
 @media screen and (min-width: 768px) {
   .p-archive-visual {
@@ -861,21 +938,308 @@ a {
   }
 }
 
-.p-menu__inner {
-  margin: 32px 5%;
-}
-.p-menu__inner > p {
+.p-menu__text {
   line-height: 1.5;
   margin: 25px 0 19px 0;
 }
 @media screen and (min-width: 768px) {
-  .p-menu__inner > p {
+  .p-menu__text {
     margin: 20px 0 37px 0;
   }
 }
 @media screen and (min-width: 960px) {
-  .p-menu__inner > p {
+  .p-menu__text {
     margin: 20px 0 70px 0;
+  }
+}
+
+.p-single-visual {
+  background-image: url(../../img/single-visual-sp.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 229px;
+  margin-bottom: 32px;
+}
+@media screen and (min-width: 768px) {
+  .p-single-visual {
+    background-image: url(../../img/single-visual-tablet.jpg);
+    height: 508px;
+    margin-bottom: 50px;
+  }
+}
+@media screen and (min-width: 960px) {
+  .p-single-visual {
+    background-image: url(../../img/single-visual-pc.jpg);
+  }
+}
+.p-single-visual__text {
+  padding: 93px 0 0 26px;
+}
+@media screen and (min-width: 768px) {
+  .p-single-visual__text {
+    font-size: 60px;
+    font-size: 3.75rem;
+    padding: 213px 0 0 86px;
+  }
+}
+
+.p-blockquote {
+  background-color: #F5F5F5;
+}
+.p-blockquote__text {
+  width: 89%;
+  margin: 0 auto;
+  padding-top: 30px;
+}
+@media screen and (min-width: 768px) {
+  .p-blockquote__text {
+    width: 85%;
+    padding-top: 50px;
+  }
+}
+.p-blockquote__cite {
+  width: 89%;
+  text-align: center;
+  padding-bottom: 27px;
+}
+@media screen and (min-width: 768px) {
+  .p-blockquote__cite {
+    width: 85%;
+    margin: 0 auto;
+    text-align: left;
+    padding: 61px 0 57px 0;
+  }
+}
+.p-blockquote__link {
+  text-decoration: underline;
+  color: #0000EE;
+}
+
+.p-content-block {
+  margin: 30px 0;
+}
+@media screen and (min-width: 768px) {
+  .p-content-block {
+    margin: 60px 0;
+  }
+}
+
+.p-content-block--01__img {
+  width: 100%;
+}
+
+.p-content-block--02__img {
+  width: 144px;
+  height: 89px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media screen and (min-width: 768px) {
+  .p-content-block--02__img {
+    width: 306px;
+    height: 189px;
+  }
+}
+@media screen and (min-width: 960px) {
+  .p-content-block--02__img {
+    width: 581px;
+    height: 358px;
+  }
+}
+
+.p-content-block--03 {
+  text-align: center;
+}
+.p-content-block--03 > img {
+  width: 80%;
+}
+@media screen and (min-width: 768px) {
+  .p-content-block--03 > img {
+    width: 581px;
+    height: 358px;
+    margin-bottom: 181px;
+  }
+}
+@media screen and (min-width: 960px) {
+  .p-content-block--03 > img {
+    margin-bottom: 0;
+  }
+}
+
+.p-content-block--04 {
+  text-align: center;
+  width: 100%;
+}
+.p-content-block--04__img {
+  margin-bottom: 20px;
+}
+.p-content-block--04__img:last-child {
+  margin: 0;
+}
+@media screen and (min-width: 768px) {
+  .p-content-block--04__img {
+    width: 49%;
+  }
+}
+@media screen and (min-width: 960px) {
+  .p-content-block--04__img {
+    width: 32%;
+    margin-bottom: 0;
+  }
+}
+
+.p-content-block--menu__list {
+  margin: 17px 0;
+}
+@media screen and (min-width: 768px) {
+  .p-content-block--menu__list {
+    margin: 3px 0 17px 50px;
+  }
+}
+.p-content-block--menu__list--02 {
+  margin-left: 18px;
+}
+@media screen and (min-width: 768px) {
+  .p-content-block--menu__list--02 {
+    margin-left: 68px;
+  }
+}
+
+.p-content-block--html {
+  background-color: #F5F5F5;
+}
+.p-content-block--html__code {
+  display: inline-block;
+  padding: 50px;
+}
+
+.p-content-block--table .c-table__left {
+  width: 40%;
+}
+@media screen and (min-width: 768px) {
+  .p-content-block--table .c-table__left {
+    width: 30%;
+  }
+}
+
+.p-content-block--button {
+  margin-top: 60px;
+}
+.p-content-block--button__inner {
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .p-content-block--button__inner {
+    text-align: left;
+  }
+}
+.p-content-block--button__inner > .c-button--single {
+  width: 100%;
+  height: 81px;
+}
+@media screen and (min-width: 768px) {
+  .p-content-block--button__inner > .c-button--single {
+    width: 60%;
+    height: 104px;
+  }
+}
+@media screen and (min-width: 960px) {
+  .p-content-block--button__inner > .c-button--single {
+    width: 32%;
+  }
+}
+.p-content-block--button__text {
+  font-weight: 700;
+  margin: 31px 0 69px 0;
+}
+@media screen and (min-width: 768px) {
+  .p-content-block--button__text {
+    margin: 61px 0 149px 0;
+  }
+}
+@media screen and (min-width: 960px) {
+  .p-content-block--button__text {
+    margin: 61px 0 274px 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .p-single-block > .c-inner {
+    margin: 0 7%;
+  }
+}
+@media screen and (min-width: 960px) {
+  .p-single-block > .c-inner {
+    margin: 0 6.4%;
+  }
+}
+
+.p-single-section .c-heading--p {
+  margin: 25px 0 36px 0;
+}
+@media screen and (min-width: 768px) {
+  .p-single-section .c-heading--p {
+    margin: 55px 0 62px 0;
+  }
+}
+@media screen and (min-width: 960px) {
+  .p-single-section .c-heading--p {
+    margin: 57px 0 60px 0;
+  }
+}
+.p-single-section .c-heading--h4 {
+  margin: 28px 0 34px 0;
+}
+@media screen and (min-width: 768px) {
+  .p-single-section .c-heading--h4 {
+    margin: 56px 0 73px 0;
+  }
+}
+@media screen and (min-width: 960px) {
+  .p-single-section .c-heading--h4 {
+    margin: 56px 0 57px 0;
+  }
+}
+.p-single-section .c-heading--h6 {
+  margin: 27px 0 26px 0;
+}
+@media screen and (min-width: 768px) {
+  .p-single-section .c-heading--h6 {
+    margin: 57px 0 56px 0;
+  }
+}
+
+.p-page-visual {
+  background-image: url(../../img/page-visual-sp.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 229px;
+  margin-bottom: 32px;
+}
+@media screen and (min-width: 768px) {
+  .p-page-visual {
+    background-image: url(../../img/page-visual-tablet.jpg);
+    height: 508px;
+    margin-bottom: 50px;
+  }
+}
+@media screen and (min-width: 960px) {
+  .p-page-visual {
+    background-image: url(../../img/page-visual-pc.jpg);
+  }
+}
+.p-page-visual__text {
+  padding: 93px 0 0 26px;
+}
+@media screen and (min-width: 768px) {
+  .p-page-visual__text {
+    font-size: 60px;
+    font-size: 3.75rem;
+    padding: 213px 0 0 86px;
   }
 }
 
@@ -886,6 +1250,14 @@ a {
 
 .u-brown {
   color: #3C2A10;
+}
+
+.u-reverse {
+  flex-direction: row-reverse;
+}
+
+.u-margin-top57 {
+  margin-top: 57px;
 }
 
 /*-- utilityフォルダの中の_index.scss --*/
